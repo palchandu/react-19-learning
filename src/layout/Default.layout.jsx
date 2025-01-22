@@ -4,8 +4,10 @@ import Header from "./Header";
 import Footer from "./Footer";
 const DefaultLayout = () => {
   return (
-    <div className="default-layout d-flex flex-column justify-content-between align-item-between">
-      <Header />
+    <div className="default-layout d-flex flex-column justify-content-between align-item-center p-4">
+      <div className="header-area">
+        <Header />
+      </div>
       <div className="content-area flex-grow-1">
         <Outlet />
       </div>
