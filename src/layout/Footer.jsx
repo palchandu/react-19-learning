@@ -1,6 +1,8 @@
+import { useTheme } from "../Theme/ThemeContext";
 const Footer = () => {
+  const { theme } = useTheme("light");
   return (
-    <footer className="text-center text-lg-start bg-light text-muted">
+    <footer className={`text-center text-lg-start text-muted` + (theme === "dark" ? " bg-dark" : " bg-light")}>
       <section className="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
         <div className="me-5 d-none d-lg-block">
           <span>Get connected with us on social networks:</span>
